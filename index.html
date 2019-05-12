@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="./icon/clipboard.png" type="image/x-icon">
+  <title>Clipboard Genius</title>
+  <link rel="stylesheet" href="./node_modules/highlight.js/styles/an-old-hope.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="foo">
+        <!-- header elements  -->
+        <div id="title">
+            <span id="btn__clear">Clear all</span>
+            <span id="btn__pinned"><img class="icon" src="./icon/pinned.png" alt="Pinned"></span>
+            <div class="search-box">
+                <input type="text" placeholder="Type to search" id="search" class="search search-txt">
+                <a href="" class="search-btn">
+                  <img src="./icon/search-icon.png" alt="serch" class="icon">
+                </a>
+            </div>
+            <h1 id="title__header">Clipboard Elephant</h1>
+          </div>
+
+
+  </div>
+  <main id="app">
+    <nav class="panel">
+      <div id="items">
+        <!-- ********** -->
+        <!-- Recent Clipboards Will Render Here -->
+        <!-- ********* -->
+        <button id="scroll-top">
+          <img src="./icon/scroll-up-icon.png" alt="^" class="scroll-icon" style="width:18px">
+        </button>
+        <!-- Cointainer When Clipboard is Empty -->
+        <div class="err__addItems">
+          <h4>Toggle Clipboard <span id="shortcut-inst">Ctrl+Alt+Z</span></h4>
+          <img class="logo" src="./icon/clipboard-1.png" alt="add items" srcset="">
+          <!-- <p>Add To History<span id="shortcut-inst"> Ctrl+C or ⌘+C</span></p> -->
+        </div>
+      </div>
+
+      <div id="pinnedClipboards">
+        <H4>Saved Clipboards</H4>
+        <div id="itemsSaved">
+        </div>
+      </div>
+    </nav>
+    
+  </main>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</body>
+
+</html>
